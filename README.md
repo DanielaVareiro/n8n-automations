@@ -1,4 +1,4 @@
-# 🤖 n8n Automation Workflows # n8n-automacoes
+# 🤖 n8n Automation Workflows # n8n-automações
 
 Professional automation workflows developed in **n8n** by a certified specialist | Certificado em **n8n** Workflows otimizados para eficiência operacional e integração de sistemas
 
@@ -14,8 +14,8 @@ Certified n8n specialist sharing optimized workflows for:
 - **n8n Certified** - [Validacao.Certificado.n8n.pdf](https://github.com/user-attachments/files/28321339/Validacao.Certificado.n8n.pdf)
 
 ## 📂 Workflows
-**#1** - 🤖 Automated AI Email Assistant  // IA assistente de email
-**#2** - 💰 Refund Request Processor // Processador de análises de reembolso
+- **#1** - 🤖 Automated AI Email Assistant  // IA assistente de email
+- **#2** - 💰 Refund Request Processor // Processador de análises de reembolso
 
 ## 💬 Contact
 - GitHub: (https://github.com/daniela-automation)
