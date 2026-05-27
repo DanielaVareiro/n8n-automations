@@ -14,10 +14,10 @@ Certified n8n specialist sharing optimized workflows for:
 - **n8n Certified** - [Validacao.Certificado.n8n.pdf](https://github.com/user-attachments/files/28321339/Validacao.Certificado.n8n.pdf)
 
 ## 📂 Workflows
-#1 - 🤖 Automated AI Email Assistant  // IA assistente de email
-#2 - 💰 Refund Request Processor // Processador de análises de reembolso
+**#1** - 🤖 Automated AI Email Assistant  // IA assistente de email
+**#2** - 💰 Refund Request Processor // Processador de análises de reembolso
 
 ## 💬 Contact
-- GitHub: [[seu-usuario]](https://github.com/daniela-automation)
-- LinkedIn: [[seu-perfil]](https://www.linkedin.com/in/daniela-pereira-a02725410/)
+- GitHub: (https://github.com/daniela-automation)
+- LinkedIn: (https://www.linkedin.com/in/daniela-pereira-a02725410/)
 - **Email**: daniela.med.automation@gmail.com
