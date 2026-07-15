@@ -11,7 +11,7 @@ Certified n8n specialist sharing optimized workflows for:
 - ✅ Scalable solutions
 
 ## 🎓 Credentials
-- **n8n Certified** - [Validacao.Certificado.n8n.pdf](https://github.com/user-attachments/files/28321339/Validacao.Certificado.n8n.pdf)
+- **n8n Certified** - [Visualizar Certificado](./Certificado%20n8n%20HashtagTreinamentos.pdf)
 
 ## 📂 Workflows
 - **#1** - 🤖 Automated AI Email Assistant  // IA assistente de email
