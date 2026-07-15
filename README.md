@@ -18,6 +18,4 @@ Certified n8n specialist sharing optimized workflows for:
 - **#2** - 💰 Refund Request Processor // Processador de análises de reembolso
 
 ## 💬 Contact
-- GitHub: (https://github.com/daniela-automation)
-- LinkedIn: (https://www.linkedin.com/in/daniela-pereira-a02725410/)
 - **Email**: daniela.med.automation@gmail.com
