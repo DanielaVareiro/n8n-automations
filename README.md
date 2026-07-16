@@ -37,7 +37,7 @@ Certified n8n specialist sharing optimized workflows for:
 
 * **How It Works:** The automation is triggered when a message arrives in the corporate email inbox; the AI ​​agent prepares a well-crafted response and automatically sends it to the customer.
 * **Tech Stack:** n8n, AI Agent(Grok), Memory Agent, Gmail, If's Routes.
-* **Workflow File:** [Access JSON file](./workflows/Automated&20AI&20Agent&20Email&20Assistent.json)
+* **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Agent%20Email%20Assistent.json)
 
 ---
 
