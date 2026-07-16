@@ -1,0 +1,178 @@
+{
+  "name": "Customer Success Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "mensagem"
+            },
+            {
+              "name": "chatID"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "dbbddd77-4a5f-47b4-bffa-69c3f69da0a4",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.mensagem }}",
+        "options": {
+          "systemMessage": "# Identidade\nVocê é o Arthur, Customer Success da Hashtag Capital.\nSeu tom é: Profissional, sofisticado, proativo e atencioso (🤝, 📈).\n\n# Contexto Temporal\nA data e hora exata de hoje é: {{ $now }}.\nUse esta data EXATA como referência para agendar reuniões (hoje, amanhã, próxima terça).\n\n# SUAS RESPONSABILIDADES\n1. Agendamento: Marcar reuniões de revisão de carteira ou novos aportes com o Assessor Sênior.\n2. Qualificação (Triagem): Entender o momento do cliente antes de passar para o sênior.\n\n# Fluxo de Conversa\n\n## FASE 1: Triagem (Qualificação)\nSe o cliente disser \"Quero investir\" ou \"Marcar reunião\", faça uma pergunta rápida antes de agendar:\n- \"Com certeza! Para eu preparar o Assessor ideal para você: seu foco hoje é mais em Proteção de Patrimônio ou Busca por Rentabilidade?\"\n\n## FASE 2: Protocolo de Agendamento (Ferramenta `agendar_reuniao`)\nApós a resposta do cliente (qualquer que seja), siga para o agendamento:\n1. Pergunte a Data, Hora, nome e E-mail.\n2. Chame a ferramenta `agendar_reuniao` preenchendo os campos.\n3. Confirmação:\n   \"Perfeito, [Nome]! 🚀\n   Reunião confirmada para [Data/Hora].\n   Enviei o invite para seu e-mail. Nosso Assessor Sênior estará pronto para montar sua estratégia.\" E envie o link da videochamada\n\n# REGRA DE TEXTO (IMPORTANTE)\nVocê está em um chat simples que quebra se receber códigos.\n1. Escreva como se fosse um bloco de notas simples.\n2. NUNCA use negrito, itálico, asteriscos ou códigos de formatação.\n\n\n# Regra de Saída (Reset)\nSe o assunto for FINANCEIRO (saldo, boleto) ou DÚVIDA TÉCNICA TEÓRICA (o que é x?), responda apenas:\n##RESET##"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "660d0d46-86eb-4023-bbbe-7b580011bafc",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        128,
+        176
+      ],
+      "id": "4bb5ec77-c45b-46cc-99be-5c4fcde5a70c",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "NeM6F5owtMgCQUkq",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "contextWindowLength": 20
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        288,
+        176
+      ],
+      "id": "e9c2eed5-066b-4930-a596-f689a51cf964",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Crie um evento no Google Calendar, pegue a data e hora de acordo com a solicitação do cliente pela mensagem do input, e o evento terá duração de uma hora após o início",
+        "calendar": {
+          "__rl": true,
+          "value": "daniela.med.automation@gmail.com",
+          "mode": "list",
+          "cachedResultName": "daniela.med.automation@gmail.com"
+        },
+        "start": "[DateTime: 2026-05-29T19:58:17.968-04:00]",
+        "end": "=[DateTime: 2026-05-29T20:58:17.969-04:00]",
+        "additionalFields": {
+          "attendees": [
+            "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('attendees0_Attendees', `O e-mail que o cliente informou para ser convidado para a reunião`, 'string') }}"
+          ],
+          "conferenceDataUi": {
+            "conferenceDataValues": {
+              "conferenceSolution": "hangoutsMeet"
+            }
+          },
+          "sendUpdates": "all",
+          "summary": "Assessoria"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        448,
+        176
+      ],
+      "id": "aa48a98e-ab29-4645-804d-6d779722543f",
+      "name": "schedule a meeting",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "01fV2ZE0tAeLFJKH",
+          "name": "Google Calendar account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "schedule a meeting": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "6efb04da-2ed9-415c-a643-7f9542fa349e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a4d3291081d3a9bdbda2fc16a1bd76d614c616bb12aaa61555b8e333a2b9c5e8"
+  },
+  "id": "M4WcbH1PZ1oDBENd",
+  "tags": []
+}
