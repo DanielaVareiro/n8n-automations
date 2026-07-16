@@ -29,17 +29,17 @@ Certified n8n specialist sharing optimized workflows for:
 * **How It Works:** The workflow monitors a Gmail inbox. Upon detecting an email with an invoice attachment, an AI analyzes the document, extracts key data (amounts, dates, vendor), and classifies it (personal or corporate). The file is then saved structurally in Google Drive, and the extracted data is automatically registered in a Google Sheets spreadsheet.
 * **Tech Stack:** n8n, AI Agent(OpenRouter), Gmail, Google Drive, Google Sheets, Loop Over, If's Routes.
 * **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Invoice%20Parser%20%26%20Drive%20Archiver.json)
-* * **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Automated%20AI%20Invoice%20Parser%20%26%20Drive%20Archiver.png)
+* **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Automated%20AI%20Invoice%20Parser%20%26%20Drive%20Archiver.png)
 
 ---
 
-### 2. 🤖 Automated AI Agent Email Assistent
+### 2. 🤖 Automated AI Agent Email Assistant
 > **Description:** An AI that answers emails from the company's customers, providing detailed information in response to any type of question about the company.
 
 * **How It Works:** The automation is triggered when a message arrives in the corporate email inbox; the AI ​​agent prepares a well-crafted response and automatically sends it to the customer.
 * **Tech Stack:** n8n, AI Agent(Grok), Memory Agent, Gmail, If's Routes.
-* **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Agent%20Email%20Assistent.json)
-* * **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Automated%20AI%20Agent%20Email%20Assistant.png)
+* **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Agent%20Email%20Assistant.json)
+* **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Automated%20AI%20Agent%20Email%20Assistant.png)
 
 ---
 
@@ -49,4 +49,4 @@ Certified n8n specialist sharing optimized workflows for:
 * **How It Works:** The process is triggered by a refund request submitted via a company form; upon receiving the request, the AI ​​Agent evaluates its eligibility based on company refund policies and checks the requester's details in a Google Sheet. These details influence the agent's response, and in extreme cases, the company team is notified on Telegram of the situation.
 * **Tech Stack:** n8n, Webhook, Google Sheets, Gmail, Telegram, Reimbursement Form, If's Routes.
 * **Workflow File:** [Access JSON file](./workflows/Refund%20Request%20Processor.json)
-* * **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Refund%20Request%20Processor.png)
+* **Visual Preview:** [Click here to view the workflow diagram](./Projects%20Screenshots/Refund%20Request%20Processor.png)
