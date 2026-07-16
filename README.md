@@ -28,7 +28,7 @@ Certified n8n specialist sharing optimized workflows for:
 
 * **How It Works:** The workflow monitors a Gmail inbox. Upon detecting an email with an invoice attachment, an AI analyzes the document, extracts key data (amounts, dates, vendor), and classifies it (personal or corporate). The file is then saved structurally in Google Drive, and the extracted data is automatically registered in a Google Sheets spreadsheet.
 * **Tech Stack:** n8n, AI Agent(OpenRouter), Gmail, Google Drive, Google Sheets, Loop Over, If's Routes.
-* **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Invoice%20Parser%20%26%20Drive%20Archiver...)
+* **Workflow File:** [Access JSON file](./workflows/Automated%20AI%20Invoice%20Parser%20%26%20Drive%20Archiver.json)
 
 ---
 
@@ -42,6 +42,8 @@ Certified n8n specialist sharing optimized workflows for:
 ---
 
 ### 3. 💸 Refund Request Processor
-> **Description:** The process is triggered by a refund request submitted via a company form; upon receiving the request, the AI ​​Agent evaluates its eligibility based on company refund policies and checks the requester's details in a Google Sheet. These details influence the agent's response, and in extreme cases, the company team is notified of the situation.
+> **Description:** an AI agent that analyzes reimbursement requests alongside data on the person registered as the company's customer.
+
+* **How It Works:** The process is triggered by a refund request submitted via a company form; upon receiving the request, the AI ​​Agent evaluates its eligibility based on company refund policies and checks the requester's details in a Google Sheet. These details influence the agent's response, and in extreme cases, the company team is notified of the situation.
 * **Tech Stack:** n8n, Webhook, Google Sheets, Gmail, Telegram, Reimbursement Form, If's Routes.
 * **Workflow File:** [Access JSON file](./workflows/Refund%20Request%20Processor.json)
