@@ -44,6 +44,6 @@ Certified n8n specialist sharing optimized workflows for:
 ### 3. 💸 Refund Request Processor
 > **Description:** an AI agent that analyzes reimbursement requests alongside data on the person registered as the company's customer.
 
-* **How It Works:** The process is triggered by a refund request submitted via a company form; upon receiving the request, the AI ​​Agent evaluates its eligibility based on company refund policies and checks the requester's details in a Google Sheet. These details influence the agent's response, and in extreme cases, the company team is notified of the situation.
+* **How It Works:** The process is triggered by a refund request submitted via a company form; upon receiving the request, the AI ​​Agent evaluates its eligibility based on company refund policies and checks the requester's details in a Google Sheet. These details influence the agent's response, and in extreme cases, the company team is notified on Telegram of the situation.
 * **Tech Stack:** n8n, Webhook, Google Sheets, Gmail, Telegram, Reimbursement Form, If's Routes.
 * **Workflow File:** [Access JSON file](./workflows/Refund%20Request%20Processor.json)
