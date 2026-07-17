@@ -13,7 +13,7 @@ Certified n8n specialist sharing optimized workflows for:
 - ✅ Scalable solutions
 
 ## 🎓 Credentials
-- **n8n Certified** - [Visualizar Certificado](./Certificado%20n8n%20HashtagTreinamentos.pdf)
+- **n8n Certified Profissional**
 
 ## 📂 Workflows
 - **#1** - 📄 Automated AI Invoice Parser & Drive Archiver // Leitor Automático de Faturas com IA & Arquivador no Drive
